@@ -1,0 +1,13 @@
+@include('partials/html-header')
+<body>
+    <h1>{{post.title}}</h1>
+       <p>
+        <p>{{post.text}}</p>
+        <small>Autor: {{post.firstname}} {{post.lastname}}, Datum: {{new Date(post.date).getDate()}}.{{new Date(post.date).getMonth()+1}}.{{new Date(post.date).getFullYear()}}</small> 
+        @if(user != undefined)
+            <a href="/post/{{post.id}}/edit">Bearbeiten</a>
+        @endif
+    </p>
+    <a href="/">zur Startseite</a>    
+</body>
+</html>

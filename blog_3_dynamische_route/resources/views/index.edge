@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Der OMM Blog</title>
+</head>
+<body>
+    <h1>Der OMM Blog</h1>
+    <a href="/admin/post/create">Neuen Post erstellen</a>
+    @each(post in posts)
+    <p>
+        <h2>{{post.title}}</h2>
+        <p>{{post.teaser}}</p>
+        <p><a href="/post/{{post.id}}">Artikel lesen</a></p>
+        <small>Autor: {{post.author}}, Datum: {{new Date(post.date).getDate()}}.{{new Date(post.date).getMonth()+1}}.{{new Date(post.date).getFullYear()}}</small> 
+    </p>
+    @end
+    
+</body>
+</html>

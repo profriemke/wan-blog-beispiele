@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        @if(user != undefined)
+            <li><a href="/admin/post/create">Neu</a></li>    
+            <li><a href="/admin/logout">Logout</a></li>     
+        @else
+            <li><a href="/admin/login">Login</a></li>
+        @end
+    </ul>
+</nav>

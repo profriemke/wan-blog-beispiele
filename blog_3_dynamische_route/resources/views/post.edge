@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Der OMM Blog</title>
+</head>
+<body>
+    <h1>{{post.title}}</h1>
+       <p>
+        <p>{{post.text}}</p>
+        <small>Autor: {{post.author}}, Datum: {{new Date(post.date).getDate()}}.{{new Date(post.date).getMonth()+1}}.{{new Date(post.date).getFullYear()}}</small> 
+    </p>
+    <a href="/">zur Startseite</a>    
+</body>
+</html>
